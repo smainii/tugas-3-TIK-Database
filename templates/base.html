@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAFTAR FAKULTAS DAN PRODI DI UNTIRTA</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/bootstrap/bootstrap.css" %}">
+
+</head>
+<body style="background: #f3f0e7;">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img style="height: 30px;"src="{% static "images/logountir.png" %}" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/faperta/">FAPERTA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/feb/" href="">FEB</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/fh/" href="">FH</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/fisip/" href="">FISIP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/fk/" href="">FK</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/fkip/" href="">FKIP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/ft" href="">FT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pascasarjana/" href="">PASCASARJANA</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container">
+      {% include 'judul.html' %}
+
+    <br>
+
+    <center><img style="width: 50%;" src="{% static 'images/sindanguntir.jpg' %}"></center>
+    
+
+    {% block content %}
+    {% endblock %}
+
+    </div>
+
+      <script src="{% static "vendor/jquery/jquery.js" %}" type="text/javascript"></script>
+      
+      <script src="{% static "vendor/popper/popper.js" %}" type="text/javascript"></script>
+
+      <script src="{% static "vendor/bootstrap.js" %}" type="text/javascript"></script>
+</body>
+</html>
